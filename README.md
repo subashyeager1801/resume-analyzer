@@ -127,15 +127,12 @@ Login with superuser credentials to view all analyzed resumes.
 ### 3. Resume Analysis Prompt
 - Used Claude to design the structured JSON prompt
   sent to the AI model
-- Claude suggested asking the model to return
-  score, strengths, weaknesses, keywords,
-  section scores, and job description matching
+
 
 ### 4. UI Design
 - Used Claude to generate HTML and CSS for
   the upload page and result page
-- Claude suggested card layout, color coded scores,
-  progress bars, and loading spinner
+
 
 ### 5. PDF Export Feature
 - Used Claude to suggest ReportLab library
