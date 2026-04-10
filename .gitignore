@@ -26,4 +26,4 @@ staticfiles/
 .DS_Store
 Thumbs.db
 
-*.txt
+resume analyzer.txt
