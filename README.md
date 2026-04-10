@@ -26,7 +26,7 @@ Upload your resume and get instant structured feedback.
 ## Setup Instructions
 
 ### 1. Clone the repository
-git clone https://github.com/yourusername/resume-analyzer.git
+git clone https://github.com/subashyeager1801/resume-analyzer.git
 cd resume-analyzer
 
 ### 2. Create virtual environment
