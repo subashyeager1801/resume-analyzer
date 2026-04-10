@@ -101,3 +101,101 @@ Login with superuser credentials to view all analyzed resumes.
 - Resume comparison feature
 - Email results to user
 - Deploy to production with PostgreSQL
+
+# AI Usage Documentation
+
+## AI Tools Used
+- **Claude (Anthropic)** — Coding assistant for development
+- **Groq API + LLaMA 3.3 70B** — AI model inside the app
+  for resume analysis
+
+---
+
+## Where I Used AI
+
+### 1. Project Structure
+- Used Claude to suggest Django project folder structure
+- Claude recommended separating logic into
+  pdf_extractor.py and ai_analyzer.py modules
+
+### 2. Code Generation
+- Used Claude to generate initial boilerplate for
+  views.py, models.py, and urls.py
+- Claude suggested PyMuPDF for PDF extraction
+  and python-docx for DOCX support
+
+### 3. Resume Analysis Prompt
+- Used Claude to design the structured JSON prompt
+  sent to the AI model
+- Claude suggested asking the model to return
+  score, strengths, weaknesses, keywords,
+  section scores, and job description matching
+
+### 4. UI Design
+- Used Claude to generate HTML and CSS for
+  the upload page and result page
+- Claude suggested card layout, color coded scores,
+  progress bars, and loading spinner
+
+### 5. PDF Export Feature
+- Used Claude to suggest ReportLab library
+- Claude generated the initial PDF export code
+
+### 6. Admin Panel
+- Used Claude to set up Django admin panel
+
+
+---
+
+## How I Used AI
+
+- I integrated the code into my project
+- I ran and tested it manually in the browser
+- When errors occurred I debugged them myself
+- For complex errors I shared the error message
+  with Claude to understand what went wrong
+
+---
+
+## What I Verified and Fixed Manually
+
+### 1. API Provider Issues
+- Claude initially suggested Anthropic API
+  but I had no credits
+- Switched to Google Gemini — hit quota limits
+- Finally switched to Groq API manually
+- Fixed all 400, 404, and 429 errors myself
+  by reading error messages and documentation
+
+### 2. Environment Configuration
+- .env file was in wrong folder — fixed manually
+- .gitignore was created in wrong location — fixed manually
+- *.txt rule in .gitignore was blocking
+  requirements.txt — identified and fixed manually
+
+### 3. GitHub Secret Scanning
+- Accidentally committed API key in .env
+  and resume analyzer.txt
+- GitHub blocked push multiple times
+- Manually cleaned git history
+- Deleted and recreated repository
+- Regenerated API keys multiple times
+
+### 4. Deployment on Render
+- Configured all Render settings manually
+- App showed "no such table" error after deployment
+- Fixed by adding python manage.py migrate
+  to build command manually
+- Troubleshot environment variables on Render
+- Fixed whitenoise static files configuration
+
+### 5. Testing
+- Tested with multiple real resume PDFs manually
+- Verified duplicate detection works correctly
+- Checked edge cases like wrong file types,
+  empty files, and large resumes manually
+
+AI was used as a coding assistant to speed up
+development. All debugging, configuration,
+deployment, and testing were done manually.
+Both were essential to complete this project.
